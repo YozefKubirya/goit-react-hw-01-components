@@ -1,0 +1,28 @@
+.transactionHistory{
+  width: 550px;
+      background-color: rgb(113, 113, 214);
+        color: aliceblue;
+        font-size: 30px;
+        margin: 0 auto;
+        border-radius: 8px;
+}
+.tableHead{ 
+background-color: rgb(113113, 214);
+color: aliceblue;
+font-size: 30px;};
+.tableBody{
+  text-align: center; 
+};
+.tableHeadear{
+    padding: 5px;
+}
+
+.tableBodyRow{
+font-style: italic;
+font-size: 30px;
+padding: 5px;
+
+};
+.tableBodyElement{
+  margin-right: 5px
+};
