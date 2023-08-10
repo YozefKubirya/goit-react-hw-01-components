@@ -1,22 +1,18 @@
 import PropTypes from 'prop-types';
-import css from './Friends.module.css';
-function getStatusColor(isOnline) {
-   return isOnline ? 'green' : 'red';
-}
+import css from './FriendList.module.css';
+import { FriendListItem } from './FriendListItem/FriendListItem';
+
 
 export const FriendList = ({ friends }) => {
  return  (<ul className={css.friendList} >
-      {friends.map(friend => (
-         <li className={ css.item} key={friend.id}>
-             <span
-               className={css.status}
-               style={{backgroundColor:getStatusColor(friend.isOnline)}}
-            ></span>
-  <img className={css.avatar} src={friend.avatar} alt="User avatar" width='70px' />
- <p className={css.name}>{friend.name}</p>
-</li>))}
+    {friends.map((friend) => {
+      return <FriendListItem avatar={friend.avatar} name={friend.name} isOnline={friend.isOnline} key={friend.id}></FriendListItem>
+   })}
+    
 </ul>)
+       
 };
+
 FriendList.propTypes = {
    friends: PropTypes.arrayOf(
       PropTypes.shape({

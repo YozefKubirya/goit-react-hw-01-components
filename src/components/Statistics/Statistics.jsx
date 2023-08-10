@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import css from './Statistics.module.css';
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+import { getRandomHexColor } from 'components/helpers/getRandomHexColor';
 
 export const Statistics = ({ stats ,title}) => {
    return <section className={css.statistics}>
@@ -27,5 +25,6 @@ Statistics.propTypes = {
       label: PropTypes.string,
       percentage: PropTypes.number
     }), 
-  ).isRequired, 
+   ).isRequired, 
+   title:PropTypes.string,
 }
